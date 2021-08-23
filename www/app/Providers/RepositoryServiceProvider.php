@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Repositories\AppointmentRepository;
+use App\Repositories\AttributeRepository;
 use App\Repositories\CustomerRepository;
 use App\Repositories\EmployeeRepository;
 use App\Repositories\ExpenseRepository;
@@ -35,5 +36,6 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->singleton('expense-repo', ExpenseRepository::class);
         $this->app->singleton('product-repo', ProductRepository::class);
         $this->app->singleton('service-repo', ServiceRepository::class);
+        $this->app->singleton('attribute-repo', AttributeRepository::class);
     }
 }

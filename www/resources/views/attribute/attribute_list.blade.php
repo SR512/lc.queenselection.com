@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') Product List @endsection
+@section('title') Attribute List @endsection
 @section('css')
 
     <!-- DataTables -->
@@ -10,7 +10,7 @@
 @section('content')
 
     @component('common-components.breadcrumb',['li_1'=>['Dashboard'=>route('home')]])
-        @slot('title') Product List  @endslot
+        @slot('title') Attribute List  @endslot
     @endcomponent
 
     <div class="row">
@@ -18,15 +18,15 @@
             <div class="card">
                 <div class="card-body">
                     <div class="float-right">
-                        <a  href="{{route('products.create')}}" class="btn btn-primary btn-sm"><i
-                                class="mdi mdi-plus"></i> New Product</a>
+                        <a  href="{{route('attributes.create')}}" class="btn btn-primary btn-sm"><i
+                                class="mdi mdi-account-plus"></i> New Attributes</a>
                     </div>
                     <div class="float-left">
                         <h4 class="card-title"></h4>
                     </div>
                     <div class="clearfix"></div>
                     <br/>
-                    <table id="datatable-product" class="table table-striped table-bordered dt-responsive nowrap"
+                    <table id="datatable-attributes" class="table table-striped table-bordered dt-responsive nowrap"
                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
@@ -54,6 +54,6 @@
     <script src="{{ URL::asset('/libs/pdfmake/pdfmake.min.js')}}"></script>
 
     <!-- Datatable init js -->
-    <script src="{{ URL::asset('/js/pages/product.js')}}"></script>
+    <script src="{{ URL::asset('/js/pages/attribute.js')}}"></script>
 
 @endsection

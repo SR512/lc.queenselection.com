@@ -61,10 +61,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Service Controller Route
     Route::resource('services',\App\Http\Controllers\Admin\ServiceController::class);
-    Route::get('service',[\App\Http\Controllers\Admin\ServiceController::class,'index'])->name('services.index');
+    Route::get('service',[\App\Http\Controllers\Admin\ServiceController::class,'index'])->name('service.index');
 
     // Product Controller Route
     Route::resource('products',\App\Http\Controllers\Admin\ProductController::class);
     Route::get('product',[\App\Http\Controllers\Admin\ProductController::class,'index'])->name('product.index');
+
+    // Attribute Controller Route
+    Route::resource('attributes',\App\Http\Controllers\Admin\AttributeController::class);
+    Route::get('attribute',[\App\Http\Controllers\Admin\AttributeController::class,'index'])->name('attribute.index');
 
 });

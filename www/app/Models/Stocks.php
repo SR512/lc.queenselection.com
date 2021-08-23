@@ -11,7 +11,7 @@ class Stocks extends Model
     protected $table="stocks";
     protected $fillable=[
         'product_id',
-        'attribute_id',
+        'attribute_size_id',
         'quantity',
         'min_quantity',
         'price',
@@ -20,4 +20,8 @@ class Stocks extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function attribute_size(){
+        return $this->belongsTo('App\Models\Attribute','attribute_size_id','id');
+    }
 }
