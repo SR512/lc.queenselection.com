@@ -19,6 +19,12 @@
                         <span>Customer</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('employee.index')}}" class="waves-effect">
+                        <i class="mdi mdi-account"></i>
+                        <span>Employee</span>
+                    </a>
+                </li>
                 <li class="menu-title">Product management</li>
                 <li><a href="{{route('attribute.index')}}">Attribute</a></li>
                 <li><a href="{{route('product.index')}}">Product</a></li>

@@ -1,13 +1,13 @@
 @extends('layouts.master')
 
-@section('title') New Customer @endsection
+@section('title') New Employee @endsection
 @section('css')
 
 @endsection
 @section('content')
 
-    @component('common-components.breadcrumb',['li_1'=>['Dashboard'=>route('home'),'Customer List' =>route('customer.index') ]])
-        @slot('title') New Customer  @endslot
+    @component('common-components.breadcrumb',['li_1'=>['Dashboard'=>route('home'),'Employee List' =>route('employee.index') ]])
+        @slot('title') New Employee  @endslot
     @endcomponent
 
     <div class="row">
@@ -15,15 +15,15 @@
             <div class="card">
                 <div class="card-body">
                     <div class="float-right">
-                        <a  href="{{route('customers.index')}}" class="btn btn-primary btn-sm"><i
-                                class="mdi mdi-arrow-left"></i> Back Customer List</a>
+                        <a  href="{{route('employee.index')}}" class="btn btn-primary btn-sm"><i
+                                class="mdi mdi-arrow-left"></i> Back Employee List</a>
                     </div>
                     <div class="float-left">
                         <h4 class="card-title"></h4>
                     </div>
                     <div class="clearfix"></div>
                     <br/>
-                    {!! Form::open(['url' => route('customers.store'),'id'=>'customer-form']) !!}
+                    {!! Form::open(['url' => route('employees.store'),'id'=>'employee-form']) !!}
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -41,6 +41,17 @@
                                 {!! Form::label('last_name', 'Last name', ['class' => 'col-form-label']); !!}
                                 {!! Form::text('last_name','',['class' => 'form-control']); !!}
                                 @error('last_name')
+                                <span style="color:red">
+                                    {{$message}}
+                               </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {!! Form::label('gender', 'Gender', ['class' => 'col-form-label']); !!}
+                                {!! Form::select('gender',['MALE'=>'Male','FEMALE'=>'Female'],null,['class' => 'form-control job_type','placeholder'=>'Select Gender']); !!}
+                                @error('gender')
                                 <span style="color:red">
                                     {{$message}}
                                </span>
@@ -105,7 +116,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 {!! Form::label('city','City', ['class' => 'col-form-label']); !!}
-                                {!! Form::text('city','',['class' => 'form-control','max'=>'10']); !!}
+                                {!! Form::text('city','',['class' => 'form-control']); !!}
                                 @error('city')
                                 <span style="color:red">
                                     {{$message}}
@@ -116,7 +127,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 {!! Form::label('pin_code', 'Pin code', ['class' => 'col-form-label']); !!}
-                                {!! Form::number('pin_code','',['class' => 'form-control','max'=>'10']); !!}
+                                {!! Form::number('pin_code','',['class' => 'form-control','min'=>'6']); !!}
                                 @error('pin_code')
                                 <span style="color:red">
                                     {{$message}}
@@ -126,7 +137,42 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                            {!! Form::submit('Save',['class'=>'btn btn-primary btn-md']) !!}
+                                {!! Form::label('job', 'Job Type', ['class' => 'col-form-label']); !!}
+                                {!! Form::select('job_type',['BOTH'=>'Both','BOTH'=>'Both','COMMISSION'=>'Commission','SALARIED'=>'Salaried'],null,['class' => 'form-control job_type','placeholder'=>'Select job type']); !!}
+                                @error('job_type')
+                                <span style="color:red">
+                                    {{$message}}
+                               </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="display: none;" id="commission_percentage">
+                            <div class="form-group">
+                                {!! Form::label('commission_percentage', 'Commission (%)', ['class' => 'col-form-label']); !!}
+                                {!! Form::number('commission_percentage','',['class' => 'form-control commission_percentage']); !!}
+                                @error('commission_percentage')
+                                <span style="color:red">
+                                    {{$message}}
+                               </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group" style="display: none;" id="salary">
+                                {!! Form::label('salary', 'Salary', ['class' => 'col-form-label']); !!}
+                                {!! Form::number('salary','',['class' => 'form-control salary']); !!}
+                                @error('salary')
+                                <span style="color:red">
+                                    {{$message}}
+                               </span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {!! Form::submit('Save',['class'=>'btn btn-primary btn-md']) !!}
                             </div>
                         </div>
                     </div>
@@ -140,5 +186,7 @@
 @endsection
 @section('script')
     <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
-    {!! JsValidator::formRequest('App\Http\Requests\CustomerRequest', '#customer-form'); !!}
+    {!! JsValidator::formRequest('App\Http\Requests\EmployeeRequest', '#employee-form'); !!}
+    <!-- Datatable init js -->
+    <script src="{{ URL::asset('/js/pages/employee.js')}}"></script>
 @endsection
