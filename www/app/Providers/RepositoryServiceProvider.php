@@ -7,6 +7,7 @@ use App\Repositories\AttributeRepository;
 use App\Repositories\CustomerRepository;
 use App\Repositories\EmployeeRepository;
 use App\Repositories\ExpenseRepository;
+use App\Repositories\InvoiceRepository;
 use App\Repositories\ProductRepository;
 use App\Repositories\ServiceRepository;
 use Illuminate\Support\ServiceProvider;
@@ -37,5 +38,6 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->singleton('product-repo', ProductRepository::class);
         $this->app->singleton('service-repo', ServiceRepository::class);
         $this->app->singleton('attribute-repo', AttributeRepository::class);
+        $this->app->singleton('invoice-repo', InvoiceRepository::class);
     }
 }

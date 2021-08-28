@@ -37,6 +37,11 @@
                             <th>Date of Birth</th>
                             <th>Date of Anniversary</th>
                             <th>Address</th>
+                            <th>City</th>
+                            <th>Pincode</th>
+                            <th>Job type</th>
+                            <th>Commission</th>
+                            <th>Salary</th>
                             <th>Created At</th>
                             <th>Action</th>
                         </tr>

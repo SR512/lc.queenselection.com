@@ -23,6 +23,11 @@ if ($("#datatable-employee").length) {
                 {data: 'date_of_birth', name: 'date_of_birth'},
                 {data: 'date_of_anniversary', name: 'date_of_anniversary'},
                 {data: 'address', name: 'address'},
+                {data: 'city', name: 'city'},
+                {data: 'pin_code', name: 'pin_code'},
+                {data: 'job_type', name: 'job_type'},
+                {data: 'commission_percentage', name: 'commission_percentage'},
+                {data: 'salary', name: 'salary'},
                 {data: 'created_at', name: 'created_at'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]

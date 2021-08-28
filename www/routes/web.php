@@ -46,10 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Customer Controller Route
     Route::resource('customers',CustomerController::class);
     Route::get('customer',[CustomerController::class,'index'])->name('customer.index');
-
-    // Appointment Controller Route
-    Route::resource('appointments',\App\Http\Controllers\Admin\AppointmentController::class);
-    Route::get('appointment',[\App\Http\Controllers\Admin\AppointmentController::class,'index'])->name('appointment.index');
+    Route::get('find/customer',[CustomerController::class,'findCustomer'])->name('customer.search');
 
     // Employee Controller Route
     Route::resource('employees',\App\Http\Controllers\Admin\EmployeeController::class);
@@ -59,10 +56,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('expenses',\App\Http\Controllers\Admin\ExpenseController::class);
     Route::get('expenses',[\App\Http\Controllers\Admin\ExpenseController::class,'index'])->name('expenses.index');
 
-    // Service Controller Route
-    Route::resource('services',\App\Http\Controllers\Admin\ServiceController::class);
-    Route::get('service',[\App\Http\Controllers\Admin\ServiceController::class,'index'])->name('service.index');
-
     // Product Controller Route
     Route::resource('products',\App\Http\Controllers\Admin\ProductController::class);
     Route::get('product',[\App\Http\Controllers\Admin\ProductController::class,'index'])->name('product.index');
@@ -71,4 +64,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('attributes',\App\Http\Controllers\Admin\AttributeController::class);
     Route::get('attribute',[\App\Http\Controllers\Admin\AttributeController::class,'index'])->name('attribute.index');
 
+    // Invoice Controller Route
+    Route::resource('invoices',\App\Http\Controllers\Admin\InvoiceController::class);
+    Route::get('invoice',[\App\Http\Controllers\Admin\InvoiceController::class,'index'])->name('invoice.index');
 });
