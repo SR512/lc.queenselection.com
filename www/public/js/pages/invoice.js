@@ -92,13 +92,13 @@ function update_total() {
 
     var taxtotal = $('.tax-total').val();
 
-    total = roundNumber(total, 2);
-    taxprice = roundNumber(taxtotal, 2);
-    var amount = roundNumber(+total + +((total * taxtotal) / 100), 2);
+    total = total;
+    taxprice = taxtotal;
+    var amount = +total + +((total * taxtotal) / 100)
     $('.sub-total').val(total);
     $('.tax-total').val(taxprice);
-    $('.total-amount').val(amount);
-    $('.due-amount').val(amount);
+    $('.total-amount').val(amount.toFixed());
+    $('.due-amount').val(amount.toFixed());
 
     update_balance();
 }
@@ -116,7 +116,7 @@ function update_balance() {
         if (discount <= 100) {
             discount = discount * after_discount * 0.01;
             after_discount = after_discount - discount;
-            after_discount = roundNumber(after_discount, 0);
+            after_discount = after_discount
         } else {
             alert("You can not set more then 100% discount.");
             $(".discount-total").val(0);
@@ -126,10 +126,10 @@ function update_balance() {
     }
 
     var due = (after_discount) - $(".paid-amount").val();
-    due = roundNumber(due, 2);
+    due = due;
     $('.discount_amount').val(discount);
-    $('.total-amount').val(roundNumber(after_discount, 2));
-    $('.due-amount').val(due);
+    $('.total-amount').val(after_discount.toFixed());
+    $('.due-amount').val(due.toFixed());
 }
 
 function update_price() {

@@ -113,14 +113,14 @@
                                                     @endforeach
                                                 @endif
                                             </select>
-                                            <input type="text" name="item[0][product_id]" class="item-product-id form-control" required>
+                                            <input type="hidden" name="item[0][product_id]" class="item-product-id form-control" required>
                                         </td>
                                         <td style="width:15%">
                                             <select name="item[0][size]" class="item-size form-control"
                                                     data-row="0" onchange="getSizePrice(event)">
                                                 <option value="">Select size</option>
                                             </select>
-                                            <input type="text" name="item[0][size_id]" class="item-size-id form-control" required>
+                                            <input type="hidden" name="item[0][size_id]" class="item-size-id form-control" required>
                                         </td>
                                         <td class="invoice-item" style="width:20%">
                                             <textarea name="item[0][descr]"
