@@ -9,12 +9,13 @@
 // });
 
 if ($("#datatable-employee").length) {
+    var url = $('meta[name="base_url"]').attr('content');
     $(function () {
 
         var table = $('#datatable-employee').DataTable({
             processing: true,
             serverSide: true,
-            ajax: window.origin + '/employee',
+            ajax: url,
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'name', name: 'first_name'},

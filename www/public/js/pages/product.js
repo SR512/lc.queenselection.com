@@ -9,13 +9,13 @@
 // });
 var option;
 if($('#datatable-product').length){
-
+    var url = $('meta[name="base_url"]').attr('content');
     $(function () {
 
         var table = $('#datatable-product').DataTable({
             processing: true,
             serverSide: true,
-            ajax: window.origin + '/product',
+            ajax: url,
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'product_name', name: 'product_name'},

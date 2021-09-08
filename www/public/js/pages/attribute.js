@@ -9,10 +9,12 @@
 // });
 $(function () {
 
+    var url = $('meta[name="base_url"]').attr('content');
+
     var table = $('#datatable-attributes').DataTable({
         processing: true,
         serverSide: true,
-        ajax: window.origin+'/attribute',
+        ajax: url,
         columns: [
             {data: 'id', name: 'id'},
             {data: 'size', name: 'size'},

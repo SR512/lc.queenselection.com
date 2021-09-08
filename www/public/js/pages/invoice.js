@@ -11,11 +11,11 @@
 var productOption;
 if ($("#datatable-invoice").length) {
     $(function () {
-
+        var url = $('meta[name="base_url"]').attr('content');
         var table = $('#datatable-invoice').DataTable({
             processing: true,
             serverSide: true,
-            ajax: window.origin + '/invoice',
+            ajax: url,
             columns: [
                 {data: 'invoicedate', name: 'invoicedate'},
                 {data: 'name', name: 'name'},
