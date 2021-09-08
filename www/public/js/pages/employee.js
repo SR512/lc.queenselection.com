@@ -8,14 +8,16 @@
 //     table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
 // });
 
+var url = $('meta[name="base_url"]').attr('content');
+
 if ($("#datatable-employee").length) {
-    var url = $('meta[name="base_url"]').attr('content');
+
     $(function () {
 
         var table = $('#datatable-employee').DataTable({
             processing: true,
             serverSide: true,
-            ajax: url,
+            ajax: url+'/employee',
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'name', name: 'first_name'},

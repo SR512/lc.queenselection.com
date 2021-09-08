@@ -15,7 +15,7 @@ if ($("#datatable-invoice").length) {
         var table = $('#datatable-invoice').DataTable({
             processing: true,
             serverSide: true,
-            ajax: url,
+            ajax: url+'/invoice',
             columns: [
                 {data: 'invoicedate', name: 'invoicedate'},
                 {data: 'name', name: 'name'},

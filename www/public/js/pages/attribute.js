@@ -14,7 +14,7 @@ $(function () {
     var table = $('#datatable-attributes').DataTable({
         processing: true,
         serverSide: true,
-        ajax: url,
+        ajax: url+'/attribute',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'size', name: 'size'},

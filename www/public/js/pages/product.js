@@ -15,7 +15,7 @@ if($('#datatable-product').length){
         var table = $('#datatable-product').DataTable({
             processing: true,
             serverSide: true,
-            ajax: url,
+            ajax: url+'/product',
             columns: [
                 {data: 'id', name: 'id'},
                 {data: 'product_name', name: 'product_name'},

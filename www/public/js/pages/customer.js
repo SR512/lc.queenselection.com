@@ -12,7 +12,7 @@ $(function () {
     var table = $('#datatable-customer').DataTable({
         processing: true,
         serverSide: true,
-        ajax: url,
+        ajax: url+'/customer',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'first_name'},
