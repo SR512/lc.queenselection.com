@@ -33,15 +33,19 @@
                         <div class="col-6 text-right">
                             <address>
                                 <strong>Billed From:</strong><br>
-                                Queen selection<br>
-                                Morbi<br>
+                                <p style="text-align: right">
+                                    Queen selection<br>
+                                    Shop no 1,2,3 first floor,<br>
+                                    Balaji complex,Opp canal chwokdi,<br>
+                                    Ravapar road Morbi-363 641<br>
+                                </p>
                             </address>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6 mt-3">
                             <address>
-                                <strong>Gst no: </strong>{{config('constants.GST_NO')}}<br>
+                                <strong>GSTIN(NO):</strong>{{config('constants.GST_NO')}}<br>
                                 <strong>Payment
                                     Method: </strong>{{config('constants.PAYMENT_METHODS')[$invoice->method]}}<br>
                                 <strong>Payment

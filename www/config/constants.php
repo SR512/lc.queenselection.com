@@ -6,6 +6,6 @@ return [
     'PAYMENT_METHODS' => ['CASH'=>'Cash','CHEQUE'=>'Cheque','CARD'=>'Card','ONLINE'=>'Online'],
     'DISCOUNT_TYPE' => ['FLAT'=>'Flat','%'=>'%'],
     'PAYMENT_STATUS' => ['PARTIALLY_PAID'=>'Partially paid','UNPAID'=>'Unpaid','PENDING'=>'Pending','CANCELLED'=>'Cancelled','PAID'=>'Paid'],
-    'GST_NO' => '18AABCU9603R1ZM',
-    'GST' => true
+    'GST_NO' => '24EDZPD9033E1ZC',
+    'GST' => true,
 ];
