@@ -9,6 +9,7 @@
     <meta content="" name="" />
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="base_url" content="{{ URL::to('/') }}">
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ URL::asset('images/favicon.ico')}}">
     @include('layouts.head')
