@@ -25,17 +25,30 @@
                         <span>Employee</span>
                     </a>
                 </li>
+                <li class="menu-title">Product management</li>
+                <li><a href="{{route('attribute.index')}}"><i class="fab fa-product-hunt"></i>Attribute</a></li>
+                <li><a href="{{route('product.index')}}"><i class="fab fa-product-hunt"></i> Product</a></li>
+                <li class="menu-title">Invoice management</li>
                 <li>
                     <a href="{{route('invoice.index')}}" class="waves-effect">
-                        <i class="mdi mdi-file"></i>
-                        <span>Invoice</span>
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Customer Invoice</span>
                     </a>
                 </li>
-                <li class="menu-title">Product management</li>
-                <li><a href="{{route('attribute.index')}}">Attribute</a></li>
-                <li><a href="{{route('product.index')}}">Product</a></li>
-                <li class="menu-title">Settings</li>
+                <li>
+                    <a href="{{route('sellerinvoice.index')}}" class="waves-effect">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Seller Invoice</span>
+                    </a>
+                </li>
 
+                <li class="menu-title">Settings</li>
+                <li>
+                    <a href="{{route('setting.index')}}" class="waves-effect">
+                        <i class="fa fa-cog"></i>
+                        <span>General Setting</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

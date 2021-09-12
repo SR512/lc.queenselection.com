@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') Employee List @endsection
+@section('title') Seller Invoice List @endsection
 @section('css')
 
     <!-- DataTables -->
@@ -10,7 +10,7 @@
 @section('content')
 
     @component('common-components.breadcrumb',['li_1'=>['Dashboard'=>route('home')]])
-        @slot('title') Employee List  @endslot
+        @slot('title') Seller Invoice List  @endslot
     @endcomponent
 
     <div class="row">
@@ -18,30 +18,25 @@
             <div class="card">
                 <div class="card-body">
                     <div class="float-right">
-                        <a  href="{{route('employees.create')}}" class="btn btn-primary btn-sm"><i
-                                class="mdi mdi-account-plus"></i> New employee</a>
+                        <a  href="{{route('sellerinvoices.create')}}" class="btn btn-primary btn-sm"><i
+                                class="mdi mdi-note"></i> New Seller Invoice</a>
                     </div>
                     <div class="float-left">
                         <h4 class="card-title"></h4>
                     </div>
                     <div class="clearfix"></div>
                     <br/>
-                    <table id="datatable-employee" class="table table-striped table-bordered dt-responsive nowrap"
+                    <table id="datatable-seller-invoice" class="table table-striped table-bordered dt-responsive nowrap"
                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th>Date of Birth</th>
-                            <th>Date of Anniversary</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>Pincode</th>
-                            <th>Job type</th>
-                            <th>Commission</th>
-                            <th>Salary</th>
+                            <th>Invoice Date</th>
+                            <th>Customer Detail</th>
+                            <th>Amount</th>
+                            <th>Paid</th>
+                            <th>Due</th>
+                            <th>Status</th>
+                            <th>Method</th>
                             <th>Created At</th>
                             <th>Action</th>
                         </tr>
@@ -64,6 +59,6 @@
     <script src="{{ URL::asset('/libs/pdfmake/pdfmake.min.js')}}"></script>
 
     <!-- Datatable init js -->
-    <script src="{{ URL::asset('/js/pages/employee.js')}}"></script>
+    <script src="{{ URL::asset('/js/pages/seller-invoice.js')}}"></script>
 
 @endsection

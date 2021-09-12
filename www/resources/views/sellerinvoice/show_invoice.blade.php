@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="invoice-title">
-{{--                        <h4 class="float-right font-size-16">Order # 12345</h4>--}}
+                        {{--                        <h4 class="float-right font-size-16">Order # 12345</h4>--}}
                         <div class="mb-4">
                             <img src="{{config('global.site_logo')}}" alt="logo" height="50px"/>
                         </div>

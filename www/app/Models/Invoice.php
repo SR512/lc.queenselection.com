@@ -29,6 +29,7 @@ class Invoice extends Model
       'due',
       'note',
       'method',
+      'invoice_type',
       'status'
     ];
 

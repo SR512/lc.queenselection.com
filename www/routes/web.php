@@ -67,4 +67,12 @@ Route::group(['middleware' => 'auth'], function () {
     // Invoice Controller Route
     Route::resource('invoices',\App\Http\Controllers\Admin\InvoiceController::class);
     Route::get('invoice',[\App\Http\Controllers\Admin\InvoiceController::class,'index'])->name('invoice.index');
+
+    // Seller Invoice Controller Route
+    Route::resource('sellerinvoices',\App\Http\Controllers\Admin\SellerInvoiceController::class);
+    Route::get('sellerinvoice',[\App\Http\Controllers\Admin\SellerInvoiceController::class,'index'])->name('sellerinvoice.index');
+
+    // Setting Controller Route
+    Route::resource('settings',\App\Http\Controllers\Admin\SettingController::class);
+    Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('setting.index');
 });

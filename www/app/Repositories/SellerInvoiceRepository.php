@@ -8,12 +8,12 @@ use App\Models\Attribute;
 use App\Models\Invoice;
 use Carbon\Carbon;
 
-class InvoiceRepository
+class SellerInvoiceRepository
 {
     //get invoice
     public function getInvoice()
     {
-        return Invoice::where('invoice_type','CUSTOMER')->latest();
+        return Invoice::where('invoice_type','SELLER')->latest();
     }
 
     // Create New Recoard
@@ -38,7 +38,7 @@ class InvoiceRepository
             'due'=>$params['due'],
             'note'=>$params['note'],
             'method'=>$params['method'],
-            'invoice_type'=>'CUSTOMER',
+            'invoice_type'=>'SELLER',
             'status'=>$params['status'],
             'created_at' => Carbon::now()
         ]);
@@ -67,7 +67,7 @@ class InvoiceRepository
             'due'=>$params['due'],
             'note'=>$params['note'],
             'method'=>$params['method'],
-            'invoice_type'=>'CUSTOMER',
+            'invoice_type'=>'SELLER',
             'status'=>$params['status'],
             'updated_at' => Carbon::now()
         ]);
