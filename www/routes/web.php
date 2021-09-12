@@ -55,7 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Expense Controller Route
     Route::resource('expenses',\App\Http\Controllers\Admin\ExpenseController::class);
-    Route::get('expenses',[\App\Http\Controllers\Admin\ExpenseController::class,'index'])->name('expenses.index');
+    Route::get('expense',[\App\Http\Controllers\Admin\ExpenseController::class,'index'])->name('expense.index');
 
     // Product Controller Route
     Route::resource('products',\App\Http\Controllers\Admin\ProductController::class);
