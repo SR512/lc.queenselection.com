@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\QovexController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,4 +76,8 @@ Route::group(['middleware' => 'auth'], function () {
     // Setting Controller Route
     Route::resource('settings',\App\Http\Controllers\Admin\SettingController::class);
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('setting.index');
+
+    Route::get('/storage-link', function () {
+        Artisan::call('storage:link');
+    });
 });
