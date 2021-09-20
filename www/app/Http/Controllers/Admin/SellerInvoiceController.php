@@ -136,17 +136,20 @@ class SellerInvoiceController extends Controller
         $products = Product::all();
         if (!empty($products)) {
             foreach ($products as $key => $row) {
-                $products_with_size_data[$key]['product_id'] = $row->id;
-                $products_with_size_data[$key]['product_name'] = $row->product_name;
 
                 foreach ($row->stocks as $stock) {
-                    $data = [];
-                    $data['id'] = $stock->id;
-                    $data['size'] = $stock->attribute_size->size;
-                    $data['min_quantity'] = $stock->min_quantity;
-                    $data['price'] = $stock->price;
 
-                    $products_with_size_data[$key]['size'][] = $data;
+                    if($stock->quantity != 0){
+                        $products_with_size_data[$key]['product_id'] = $row->id;
+                        $products_with_size_data[$key]['product_name'] = $row->product_name;
+                        $data = [];
+                        $data['id'] = $stock->id;
+                        $data['size'] = $stock->attribute_size->size;
+                        $data['min_quantity'] = $stock->min_quantity;
+                        $data['price'] = $stock->price;
+
+                        $products_with_size_data[$key]['size'][] = $data;
+                    }
                 }
             }
         }
