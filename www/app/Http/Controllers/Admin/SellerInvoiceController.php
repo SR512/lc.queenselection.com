@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SellerInvoiceRequest;
 use App\Models\Employee;
 use App\Models\Product;
+use PDF;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -120,7 +121,9 @@ class SellerInvoiceController extends Controller
                 }
             }
         }
-        return view('sellerinvoice.show_invoice', compact('invoice', 'products_with_size_data'));
+
+        return PDF::loadview('invoice.show_invoice', compact('invoice', 'products_with_size_data'))->stream('download.pdf');
+
     }
 
     /**

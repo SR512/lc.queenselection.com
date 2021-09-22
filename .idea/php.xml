@@ -112,6 +112,11 @@
       <path value="$PROJECT_DIR$/www/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/www/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/www/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/www/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/www/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/www/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/www/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/www/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="PhpUnit">

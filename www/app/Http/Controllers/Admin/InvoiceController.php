@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\InvoiceRequest;
 use App\Models\Employee;
 use App\Models\Product;
+use PDF;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -61,7 +62,7 @@ class InvoiceController extends Controller
 
                 foreach ($row->stocks as $stock) {
 
-                    if($stock->quantity != 0){
+                    if ($stock->quantity != 0) {
                         $products_with_size_data[$key]['product_id'] = $row->id;
                         $products_with_size_data[$key]['product_name'] = $row->product_name;
                         $data = [];
@@ -126,7 +127,9 @@ class InvoiceController extends Controller
                 }
             }
         }
-        return view('invoice.show_invoice', compact('invoice', 'employees', 'products_with_size_data'));
+
+        return PDF::loadview('invoice.show_invoice', compact('invoice', 'employees', 'products_with_size_data'))->stream('download.pdf');
+
     }
 
     /**
@@ -168,7 +171,7 @@ class InvoiceController extends Controller
      */
     public function update(InvoiceRequest $request, $id)
     {
-        $invoice = resolve('invoice-repo')->update($id,$request);
+        $invoice = resolve('invoice-repo')->update($id, $request);
 
         if (!empty($invoice)) {
             toastr()->success('Invoice updated successfully.');
@@ -191,9 +194,9 @@ class InvoiceController extends Controller
         $invoice = resolve('invoice-repo')->findById($id);
 
         if (!empty($invoice)) {
-            if($invoice->delete()){
+            if ($invoice->delete()) {
                 toastr()->success('Invoice delete successfully.');
-            }else{
+            } else {
                 toastr()->error('Invoice not delete.');
             }
 
