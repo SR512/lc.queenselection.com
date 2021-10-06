@@ -25,7 +25,7 @@ class InvoiceRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'email'=>'required|email',
+            'email'=>'nullable|email',
             'mobile'=>'required|numeric|digits:10',
             'invoicedate'=>'required',
             'duedate'=>'required',

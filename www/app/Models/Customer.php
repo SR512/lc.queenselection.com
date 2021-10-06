@@ -29,7 +29,7 @@ class Customer extends Model
         'first_name' => 'required',
         'last_name' => 'required',
         'email' => 'nullable|email',
-        'mobile_number' => 'required|numeric|digits:10'
+        'mobile_number' => 'required|numeric|digits:10|unique:customers'
     ];
 
     public $update_rules = [
