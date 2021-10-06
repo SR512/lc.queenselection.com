@@ -55,6 +55,12 @@
                         <span>Expenses</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('report.index')}}" class="waves-effect">
+                        <i class="mdi mdi-cash-100"></i>
+                        <span>Report</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

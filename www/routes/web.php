@@ -77,6 +77,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('settings',\App\Http\Controllers\Admin\SettingController::class);
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('setting.index');
 
+    // Report Controller Route
+    Route::get('report',[\App\Http\Controllers\Admin\ReportController::class,'index'])->name('report.index');
+    Route::post('report/expense',[\App\Http\Controllers\Admin\ReportController::class,'exportExpense'])->name('expense.report.index');
+
     Route::get('/storage-link', function () {
         Artisan::call('storage:link');
     });

@@ -18,6 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/dompdf/dompdf" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/ezyang/htmlpurifier" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/facade/ignition-contracts" />
@@ -38,9 +39,14 @@
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/maatwebsite/excel" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/maennchen/zipstream-php" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/markbaker/complex" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/markbaker/matrix" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/myclabs/php-enum" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/nunomaduro/collision" />
@@ -52,6 +58,7 @@
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/phpoffice/phpspreadsheet" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/phpoption/phpoption" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/phpunit/php-code-coverage" />
@@ -64,6 +71,7 @@
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/www/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/www/vendor/psr/simple-cache" />

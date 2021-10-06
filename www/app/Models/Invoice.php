@@ -41,4 +41,7 @@ class Invoice extends Model
     {
         return Carbon::parse($this->invoicedate)->format('d-m-Y');
     }
+    public function employees(){
+        return $this->belongsTo('App\Models\Employee','employee_id');
+    }
 }
